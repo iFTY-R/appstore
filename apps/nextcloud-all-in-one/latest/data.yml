@@ -1,0 +1,42 @@
+additionalProperties:
+  formFields:
+    - default: 40080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort       # 限制端口范围 1-65535
+      type: number          # 数字类型
+    - default: 40808
+      edit: true
+      envKey: PANEL_APP_PORT_GUI
+      labelEn: GUI Port
+      labelZh: GUI 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 40443
+      edit: true
+      envKey: PANEL_APP_PORT_SECURE
+      labelEn: Secure Port
+      labelZh: 安全端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      required: true
+      type: text
+      label:
+        en: Time Zone
+        ja: タイムゾーン
+        ms: Zon Waktu
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh-Hant: 時區
+        zh: 时区

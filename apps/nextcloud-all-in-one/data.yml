@@ -1,0 +1,25 @@
+name: Nextcloud-All-in-One
+tags:
+  - 云存储
+title: 一键部署的 Nextcloud 全功能一体化容器
+description: 一键部署的 Nextcloud 全功能一体化容器
+additionalProperties:
+  key: nextcloud-all-in-one  #应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: Nextcloud-All-in-One #应用名称
+  tags: #应用标签，可以有多个，请参照下方的标签列表
+    - Cloud
+    - Nextcloud
+    - Storage
+  shortDescZh: 一键部署的 Nextcloud 全功能一体化容器
+  shortDescEn: One-click deployment of full-featured Nextcloud AIO container
+  type: website  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
+  crossVersionUpdate: true  #是否可以跨大版本升级
+  limit: 1 #应用安装数量限制，0 代表无限制
+  recommend: 2
+  website: https://github.com/nextcloud/all-in-one #官网地址
+  github: https://github.com/nextcloud/all-in-one #github 地址
+  document: https://nextcloud.com/blog/how-to-install-the-nextcloud-all-in-one-on-linux/  #文档地址
+  memoryRequired: 4096
+  architectures:
+    - amd64
+    - arm64

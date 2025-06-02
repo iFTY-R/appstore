@@ -1,0 +1,25 @@
+version: '3'
+services:
+  nextcloud-aio-mastercontainer:
+    image: ghcr.io/nextcloud-releases/all-in-one:latest
+    container_name: nextcloud-aio-mastercontainer
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+      - "${PANEL_APP_PORT_GUI}:8080"
+      - "${PANEL_APP_PORT_SECURE}:8443"
+    volumes:
+      - nextcloud_aio_mastercontainer:/mnt/docker-aio-config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - TZ=${TIME_ZONE}
+    labels:
+      createdBy: "iFTY"
+networks:
+  1panel-network:
+    external: true
+volumes:
+  nextcloud_aio_mastercontainer:
+    name: nextcloud_aio_mastercontainer
