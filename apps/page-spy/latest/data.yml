@@ -1,0 +1,71 @@
+additionalProperties:
+  formFields:
+    - default: 6752
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+    # AUTH_PASSWORD
+    - default: 123456
+      edit: true
+      envKey: AUTH_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      required: true
+      type: text
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 패스워드
+        zh-Hant: 密碼
+        zh: 密码
+    #JWT_SECRET
+    - default: page-spy
+      edit: true
+      envKey: JWT_SECRET
+      labelEn: Secret
+      labelZh: 密钥
+      required: true
+      type: text
+      label:
+        en: Secret
+        ja: セクリット
+        ms: Runcit
+        pt-br: Segredo
+        ru: Секрет
+        ko: 성책
+        zh-Hant: 秘鑰
+        zh: 密钥
+    #JWT_EXPIRATION_HOURS
+    - default: 24
+      edit: true
+      envKey: JWT_EXPIRATION_HOURS # 设置 token 过期时间（小时），默认 24 小时；
+      labelEn: Expiration Hours
+      labelZh: 过期时间（小时）
+      required: true
+      type: number
+      label:
+        en: Expiration Hours
+        ja: 有効期限
+        ms: Masa berlaku
+        pt-br: Expirar Horas
+        ru: Срок действия
+        ko: 이용기간
+        zh-Hant: 到期時間
+        zh: 过期时间（小时）
+

@@ -1,0 +1,25 @@
+additionalProperties:
+  # 应用的唯一标识，仅限小写英文和中划线，用于在 Linux 下创建文件夹
+  key: page-spy
+  # 应用在面板中的显示名称
+  name: PageSpy
+  # 应用标签，可用于分类（可多选）。常用标签请参考官方文档（如 Tool、WebSite、Runtime 等）
+  tags:
+    - Tool
+  # 应用中文简介，不超过 30 字
+  shortDescZh: 页面监控与抓取工具
+  # 应用英文简介
+  shortDescEn: Web-based page monitoring and scraping tool
+  # 应用类型：tool / website / runtime 之一
+  # PageSpy 属于一个“工具类”应用，用户可以部署并通过 Web 界面进行操作
+  type: tool
+  # 是否支持跨大版本升级（例如 1.x -> 2.x），true 表示支持
+  crossVersionUpdate: true
+  # 应用安装数量限制，0 表示不限制
+  limit: 0
+  # 应用官网地址（可选，但建议填写）
+  website: https://www.pagespy.org
+  # 应用源码仓库地址
+  github: https://github.com/huolalatech/page-spy-web
+  # 应用文档或帮助链接
+  document: https://www.pagespy.org/#/docs/introduction
