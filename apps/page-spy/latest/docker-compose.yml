@@ -1,0 +1,22 @@
+version: '3'
+networks:
+  1panel-network:
+    external: true
+services:
+  page-spy:
+    networks:
+      - 1panel-network
+    image: ghcr.io/huolalatech/page-spy-web:latest
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:6752"
+    volumes:
+      - ./data/log:/app/log
+      - ./data/data:/app/data
+    environment:
+      - AUTH_PASSWORD=${AUTH_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION_HOURS=${JWT_EXPIRATION_HOURS}
+    labels:
+      createdBy: "iFTY"
